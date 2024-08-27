@@ -5,7 +5,6 @@ import Dashboard from "../dashboard/Dashboard";
 import NotFound from "./NotFound";
 import { today } from "../utils/date-time";
 import useQuery from "../utils/useQuery";
-import Reservations from "../reservations/NewReservations";
 import Tables from "../tables/tables";
 import Seat from "../seat/seat";
 import Search from "../search/search";
