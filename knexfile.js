@@ -33,10 +33,10 @@ module.exports = {
     pool: { min: 1, max: 5 },
     connection: DATABASE_URL_TEST,
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: path.join(__dirname, "back-end", "src", "db", "migrations"),
     },
     seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
+      directory: path.join(__dirname, "back-end", "src", "db", "migrations"),
     },
     debug: !!DEBUG,
   },
@@ -45,10 +45,10 @@ module.exports = {
     pool: { min: 1, max: 5 },
     connection: DATABASE_URL_PREVIEW,
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: path.join(__dirname, "back-end", "src", "db", "migrations"),
     },
     seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
+      directory: path.join(__dirname, "back-end", "src", "db", "migrations"),
     },
     debug: !!DEBUG,
   },
@@ -57,7 +57,7 @@ module.exports = {
     pool: { min: 1, max: 5 },
     connection: DATABASE_URL,
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: path.join(__dirname, "back-end", "src", "db", "migrations"),
     },
     seeds: {
       directory: path.join(__dirname, "back-end", "src", "db", "seeds"),
