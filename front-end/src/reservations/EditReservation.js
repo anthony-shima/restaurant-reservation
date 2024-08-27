@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import ReservationForm from "./ReservationForm";
-import { updateReservation, readReservation } from "../utils/api";
+import { updateReservation, findReservation } from "../utils/api";
 import { useParams, useHistory } from "react-router-dom";
 import ErrorAlert from "../layout/ErrorAlert";
 
 //edit reservation
 function EditReservation() {
   const history = useHistory();
-
   const { reservation_id } = useParams();
-//clear form
+
+  //clear form
   const initialState = {
     first_name: "",
     last_name: "",
@@ -28,7 +28,7 @@ function EditReservation() {
   function loadDashboard() {
     const abortController = new AbortController();
     setReservationsError(null);
-    readReservation(reservation_id, abortController.signal)
+    findReservation(reservation_id, abortController.signal)
       .then(setReservation)
       .catch(setReservationsError);
 
